@@ -1,3 +1,11 @@
+:root {
+  --customBlack: #3c3c3c;
+  --customWhite: #cfcfcf;
+  --customGreen: #2d8f59;
+  --customRed: #d30000;
+  --backHover: rgba(255, 255, 255, 0.3);
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  font-family: "Anton", sans-serif !important;
+  background: var(--customWhite) !important;
+}
+
+.product {
+  font-family: "Odibee Sans", cursive;
+}
+
+.search-btn {
+  background: var(--customWhite) !important;
 }
