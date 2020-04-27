@@ -4,6 +4,9 @@
   --customGreen: #2d8f59;
   --customRed: #d30000;
   --backHover: rgba(255, 255, 255, 0.3);
+  --mainTransition: all 0.5s linear;
+  --colorBlack: black;
+  --colorWhite: white;
 }
 
 .App {
@@ -45,6 +48,12 @@
   }
 }
 
+.text-title {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: var(--customRed);
+}
 body {
   font-family: "Anton", sans-serif !important;
   background: var(--customWhite) !important;
@@ -56,4 +65,9 @@ body {
 
 .search-btn {
   background: var(--customWhite) !important;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.text-green {
+  color: var(--customGreen);
 }

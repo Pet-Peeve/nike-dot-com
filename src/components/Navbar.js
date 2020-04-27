@@ -2,47 +2,45 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../nike-white-logo-4.png";
 import styled from "styled-components";
+import { ButtonContainer } from "./Button";
 
 export default class Navbar extends Component {
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-        {/* logo */}
-        <Link to="/">
-          <img src={logo} alt="logo wont load" />
-        </Link>
-        {/* links */}
-        <ul className="navbar-nav align-items-center ">
-          <li className="nav-item ml-5">
-            <Link to="##" className="nav-link">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            {/* logo */}
+            <Link to="/">
+              <img src={logo} alt="logo wont load" />
+            </Link>
+
+            {/* navbar buttton */}
+            <NavButton className="navbar-toggle ml-5 text-uppercase">
               mens
-            </Link>
-          </li>
-        </ul>
-        {/* links */}
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="##" className="nav-link">
+            </NavButton>
+            {/* navbar buttton */}
+            <NavButton className="navbar-toggle ml-5 text-uppercase">
               womens
-            </Link>
-          </li>
-        </ul>
-        {/* links */}
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="##" className="nav-link">
+            </NavButton>
+            {/* navbar buttton */}
+            <NavButton className="navbar-toggle ml-5 text-uppercase">
               kids
-            </Link>
-          </li>
-        </ul>
-        {/* links */}
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="##" className="nav-link">
+            </NavButton>
+            {/* navbar buttton */}
+            <NavButton className="navbar-toggle ml-5 text-uppercase">
               collections
-            </Link>
-          </li>
-        </ul>
+            </NavButton>
+          </div>
+        </div>
+
+        <Link to="/cart">
+          <ButtonContainer className="mr-5">
+            <i className="fas fa-cart-plus"></i>
+          </ButtonContainer>
+        </Link>
+
+        {/*search bar */}
         <form action="/action_page.php" className="navbar-form ml-auto">
           <div className="input-group">
             <input
@@ -51,9 +49,9 @@ export default class Navbar extends Component {
               placeholder="Search"
               name="search"
             />
-            <div className="input-group-btn">
-              <button className="btn btn-default search-btn" type="submit">
-                <i class="fas fa-search"></i>
+            <div className="input-group-btn search-btn">
+              <button className="btn btn-default" type="submit">
+                <i className="fas fa-search"></i>
               </button>
             </div>
           </div>
@@ -74,4 +72,11 @@ const NavWrapper = styled.nav`
     background: var(--backHover);
     color: black !important;
   }
+`;
+
+const NavButton = styled.button`
+  color: var(--customWhite);
+  border: none;
+  background: transparent;
+  font-size: 1rem;
 `;
